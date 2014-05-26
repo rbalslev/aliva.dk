@@ -1,0 +1,159 @@
+/*  CSS Overrides */
+
+/*    ----CONTENT LIST-----
+
+      01- CLEARFIX
+      02- TYPOGRAPHY
+      03- PRE HEADER CONTENT (lists, tooltip, social icons)
+      04- HEADER CSS + GRID (container, navigation, columns)
+      05- FOOTER & COPYRIGHTS CSS 
+      06- HOMEPAGE PORTFOLIO CAROUSEL, PORTFOLIO ITEM & BANNER LAYOUT
+      07- BUTTONS
+      08- LISTS
+      09- DROPCAPS
+      10- ALERTS 
+      11- CONTACT FORM 
+      12- PORTFOLIO LAYOUTS
+      13- BLOG LAYOUT
+      14- OTHER FEATURES LAYOUT (google maps,404 error style,pre style,blockquote style,team members,inner page intro...)
+      15- DRUPAL STYLES OVERRIDE
+*/
+
+/*-----------------------------------------------------------*/
+/*-------------------- 02. TYPOGRAPHY -----------------------*/
+/*-----------------------------------------------------------*/
+h1, h2, h2 a, a h2 {
+	color: RGB(106, 169, 191);
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.image-right img {
+	float: right;
+	/* box-shadow: @horz_offset, @vert_offset, @blur_distance, @spread_distance, @color */
+	-moz-box-shadow: 0px 0px 5px 3px #888;
+	-webkit-box-shadow: 0px 0px 5px 3px #888;
+	box-shadow: 0px 0px 5px 3px #888;
+}
+
+/*-----------------------------------------------------------*/
+/*-------------------- 03. SOCIAL ICONS REPAIR --------------*/
+/*-----------------------------------------------------------*/
+/* The repair here is needed to avoid social icons to be discarded by Safari AdBlocker. */
+/* The trick is to rename CSS-classes so e.g. "social-icons" become "dpsi" (DruPal Social-Icons) etc. */
+/* Only LinkedIn and Facebook social icons has been repaired. */
+
+#dpsi { position: relative; padding: 10px 0 8px 0; font-size: 0;}
+
+ul#dpsl { z-index: 1; margin: 0px; list-style: none; float: right; }
+
+ul#dpsl li { display: inline-block; float: none; }
+
+ul#dpsl li { 
+    display: inline-block; 
+    font-size: 12px; 
+    list-style: none; 
+    width: 32px; 
+    height: 32px; 
+    background: #8dc1d3; 
+    background: -moz-linear-gradient(top, #8dc1d3 0%, #67a7bd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8dc1d3), color-stop(100%,#67a7bd));
+    background: -webkit-linear-gradient(top, #8dc1d3 0%,#67a7bd 100%);
+    background: -o-linear-gradient(top, #8dc1d3 0%,#67a7bd 100%);
+    background: -ms-linear-gradient(top, #8dc1d3 0%,#67a7bd 100%);
+    background: linear-gradient(top, #8dc1d3 0%,#67a7bd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8dc1d3', endColorstr='#67a7bd',GradientType=0 );
+    text-indent: -9999px; 
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+    margin: 0 5px 0 0;
+    padding-bottom: 0px;
+    box-shadow: 0px 1px 1px #a7dcef,inset 0px 2px 5px #67a7bd; 
+    -moz-box-shadow: 0px 1px 1px #a7dcef,inset 0px 2px 5px #67a7bd; 
+    -webkit-box-shadow: 0px 1px 1px #a7dcef,inset 0px 2px 5px #67a7bd; 
+}
+
+ul#dpsl li  a {width: 32px; height: 32px; display: block; }
+
+ul#dpsl li  a.dpfb { background: url("../images/icons/facebook.png") 50% 50% no-repeat }
+
+ul#dpsl li  a.dpli { background: url("../images/icons/linkedin.png") 50% 50% no-repeat }
+
+ul#dpsl > li.dpfb-link:hover {
+    display: inline-block;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    background: #415b92;
+    background: -moz-linear-gradient(top, #415b92 0%, #33487b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#415b92), color-stop(100%,#33487b));
+    background: -webkit-linear-gradient(top, #415b92 0%,#33487b 100%);
+    background: -o-linear-gradient(top, #415b92 0%,#33487b 100%);
+    background: -ms-linear-gradient(top, #415b92 0%,#33487b 100%);
+    background: linear-gradient(top, #415b92 0%,#33487b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#415b92', endColorstr='#33487b',GradientType=0 );
+    text-indent: -9999px;
+    box-shadow: 0px 1px 1px #2a4782,inset 0px 2px 5px #4a67a0;
+    -moz-box-shadow: 0px 1px 1px #2a4782,inset 0px 2px 5px #4a67a0;
+    -webkit-box-shadow: 0px 1px 1px #2a4782,inset 0px 2px 5px #4a67a0;
+}
+
+ul#dpsl > li.dpli-link:hover {
+    display: inline-block;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    background: #007fc5;
+    background: -moz-linear-gradient(top, #007fc5 0%, #0061b6 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007fc5), color-stop(100%,#0061b6));
+    background: -webkit-linear-gradient(top, #007fc5 0%,#0061b6 100%);
+    background: -o-linear-gradient(top, #007fc5 0%,#0061b6 100%);
+    background: -ms-linear-gradient(top, #007fc5 0%,#0061b6 100%);
+    background: linear-gradient(top, #007fc5 0%,#0061b6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007fc5', endColorstr='#0061b6',GradientType=0 );
+    text-indent: -9999px;
+    box-shadow: 0px 1px 1px #004d90,inset 0px 2px 5px #16a7e8;
+    -moz-box-shadow: 0px 1px 1px #004d90,inset 0px 2px 5px #16a7e8;
+    -webkit-box-shadow: 0px 1px 1px #004d90,inset 0px 2px 5px #16a7e8;
+}
+
+/*-----------------------------------------------------------*/
+/*-------------------------- 04. HEADER ---------------------*/
+/*-----------------------------------------------------------*/
+/* Logo */
+
+#header-left {
+	margin-top: -20px;
+}
+
+div#header-left a img {
+	max-width: 190px;
+}
+
+/*-----------------------------------------------------------*/
+/*----------------- 05. FOOTER STYLES -----------------------*/
+/*-----------------------------------------------------------*/
+#footer-bottom { color: #9dcedf; }
+
+/*-----------------------------------------------------------*/
+/*-------------------- 08. LISTS ----------------------------*/
+/*-----------------------------------------------------------*/
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+	padding-bottom: 7px;
+}
+
+.hentry ul, .simple-list-2 li a {
+	color: black;
+}
+
+/* --------------------------------------------------------- */
+/* ------------------- 13- BLOG LAYOUT --------------------- */
+/* --------------------------------------------------------- */
+.sidebar .block { font-size: 14px; }
